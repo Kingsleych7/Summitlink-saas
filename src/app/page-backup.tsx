@@ -45,78 +45,17 @@ return ( <div className="min-h-screen bg-white text-gray-900">
 
   {/* SERVICES */}
   <section className="p-10 md:p-20 max-w-6xl mx-auto">
-    import Link from "next/link";
+    <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
 
-import {
-  MessageCircle,
-  Shield,
-  Phone,
-  Zap,
-  Globe,
-} from "lucide-react";
-
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
-
-export default function HomePage() {
-const services = [
-  {
-    title: "Bulk SMS",
-    link: "/services/bulk-sms",
-    desc: "Send thousands of SMS instantly.",
-    icon: <MessageCircle />,
-  },
-  {
-    title: "OTP Services",
-    link: "/services/otp-services",
-    desc: "Secure verification messages.",
-    icon: <Shield />,
-  },
-  {
-    title: "SMS API",
-    link: "/services/sms-api",
-    desc: "Integrate SMS into your apps easily.",
-    icon: <Zap />,
-  },
-  {
-    title: "WhatsApp API",
-    link: "/services/whatsapp-api",
-    desc: "Automate WhatsApp messaging for business.",
-    icon: <MessageCircle />,
-  },
-  {
-    title: "Global Messaging",
-    link: "/services/global-messaging",
-    desc: "Send messages worldwide at scale.",
-    icon: <Globe />,
-  },
-  {
-    title: "Airtime",
-    link: "/services/airtime",
-    desc: "Instant airtime recharge services.",
-    icon: <Phone />,
-  },
-  {
-    title: "Internet Data",
-    link: "/services/data",
-    desc: "Affordable data bundles.",
-    icon: <Zap />,
-  },
-  {
-    title: "Electricity",
-    link: "/services/electricity",
-    desc: "Pay electricity bills easily.",
-    icon: <Globe />,
-  },
-  {
-    title: "Pay TV",
-    link: "/services/paytv",
-    desc: "Cable TV subscriptions.",
-    icon: <MessageCircle />,
-  },
-];
+    <div className="grid md:grid-cols-3 gap-6">
+      {[
+        { title: "Bulk SMS", desc: "Send thousands of SMS instantly.", icon: <MessageCircle /> },
+        { title: "OTP SMS", desc: "Secure verification messages.", icon: <Shield /> },
+        { title: "Voice SMS", desc: "Automated voice messaging.", icon: <Phone /> },
+        { title: "SMS API", desc: "Integrate SMS into your app.", icon: <Zap /> },
+        { title: "WhatsApp API", desc: "Automate WhatsApp messaging.", icon: <MessageCircle /> },
+        { title: "Global Messaging", desc: "Reach customers worldwide.", icon: <Globe /> },
+      ].map((item, i) => (
         <Card key={i} className="rounded-2xl shadow-md">
           <CardContent className="p-6">
             <div className="text-green-600 mb-3">{item.icon}</div>
