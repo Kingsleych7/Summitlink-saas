@@ -2,14 +2,12 @@
   "name": "summitlink-saas",
   "version": "0.1.0",
   "private": true,
-
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
-
   "dependencies": {
     "axios": "^1.16.0",
     "firebase": "^12.13.0",
@@ -19,7 +17,6 @@
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
-
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
