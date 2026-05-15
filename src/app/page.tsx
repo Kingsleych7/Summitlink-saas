@@ -6,14 +6,23 @@ const whatsappNumber = "2348146327260";
 
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello%20Summitlink%20Telecom%2C%20I%20am%20interested%20in%20your%20services`;
 
-const handleSubmit = (e) => { e.preventDefault(); const text = `Name: ${form.name}%0APhone: ${form.phone}%0AMessage: ${form.message}`;
+const handleSubmit = (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+
+  e.preventDefault();
+
+  const text = `
+Name: ${form.name}
+Phone: ${form.phone}
+Service: ${form.service}
+`;
 
   window.open(
     `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`,
     "_blank"
   );
 };
-
 return ( <div className="min-h-screen bg-white text-gray-900">
 
 {/* FLOATING WHATSAPP BUTTON */}
